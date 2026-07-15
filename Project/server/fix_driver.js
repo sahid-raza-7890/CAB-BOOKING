@@ -2,7 +2,10 @@ require('dns').setServers(['8.8.8.8', '8.8.4.4']);
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
-mongoose.connect('mongodb+srv://danish0007:I7zWfH0a15K0vO6j@cluster0.p7839.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+// Use environment variables for sensitive credentials
+const mongoUri = process.env.MONGODB_URI || 'mongodb+srv://<username>:<password>@<cluster>/<database>';
+
+mongoose.connect(mongoUri)
 .then(async () => {
   const db = mongoose.connection.db;
   const hash = await bcrypt.hash('password123', 10);
