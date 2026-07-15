@@ -142,7 +142,7 @@ npm run build
 **Backend:**
 ```bash
 cd Project/server
-npm run build
+src/server.js
 ```
 
 ## 📚 API Documentation
