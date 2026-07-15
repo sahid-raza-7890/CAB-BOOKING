@@ -1,0 +1,15 @@
+{
+  "violations": [],
+  "scores": {
+    "architecture": 100,
+    "portalIsolation": 100,
+    "backend": 100,
+    "frontend": 100,
+    "socket": 100,
+    "security": 100,
+    "performance": 100,
+    "database": 100,
+    "realTime": 100,
+    "documentation": 100
+  }
+}
