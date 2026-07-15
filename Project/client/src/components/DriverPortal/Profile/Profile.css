@@ -1,0 +1,161 @@
+.profile-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    color: #fff;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.profile-panel {
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-title {
+    font-size: 16px;
+    color: #fbbf24;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.warning-banner {
+    background: rgba(255, 68, 68, 0.1);
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    color: #ff4444;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+}
+
+/* Vehicles */
+.vehicle-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.vehicle-card.active {
+    background: rgba(251, 191, 36, 0.05);
+    border-color: rgba(251, 191, 36, 0.4);
+}
+
+.vehicle-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #fbbf24;
+    color: #000;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+/* Documents */
+.document-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: 4px solid #fbbf24;
+}
+.document-item.Approved { border-left-color: #00ff88; }
+.document-item.Rejected { border-left-color: #ff4444; }
+.document-item.Pending { border-left-color: #fbbf24; }
+
+.status-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+.status-badge.Approved { background: rgba(0, 255, 136, 0.1); color: #00ff88; }
+.status-badge.Pending { background: rgba(251, 191, 36, 0.1); color: #fbbf24; }
+.status-badge.Rejected { background: rgba(255, 68, 68, 0.1); color: #ff4444; }
+
+/* Upload Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 400px;
+    max-width: 90%;
+}
+
+.ucab-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.ucab-btn {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.ucab-btn.primary {
+    background: #fbbf24;
+    color: #000;
+}
+.ucab-btn.primary:hover {
+    background: #f59e0b;
+}
+.ucab-btn.secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-group {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}

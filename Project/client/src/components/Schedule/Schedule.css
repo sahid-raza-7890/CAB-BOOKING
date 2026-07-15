@@ -1,0 +1,212 @@
+.sch-container {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.sch-main-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sch-right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: calc(100vh - 100px);
+    position: sticky;
+    top: 32px;
+}
+
+.sch-card {
+    background: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.sch-card-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 24px 0;
+    color: #fff;
+}
+
+.sch-tabs {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 16px;
+}
+
+.sch-tab {
+    padding: 8px 16px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background: rgba(255,255,255,0.05);
+    color: #888;
+}
+
+.sch-tab.active {
+    background: #22C55E;
+    color: #000;
+}
+
+.sch-tab:hover:not(.active) {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.sch-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.sch-input-group label {
+    font-size: 13px;
+    color: #a0a0a0;
+    font-weight: 600;
+}
+
+.sch-input {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 16px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.sch-input:focus {
+    border-color: #22C55E;
+}
+
+.sch-btn-primary {
+    background: #D4AF37; /* Premium Gold */
+    color: #000;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sch-btn-primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.sch-btn-primary:disabled {
+    background: #444;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.sch-btn-danger {
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sch-btn-danger:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+.sch-ride-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.sch-ride-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.sch-status-badge {
+    background: rgba(34,197,94,0.1);
+    color: #22C55E;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.sch-detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.sch-detail-label {
+    color: #888;
+}
+
+.sch-detail-value {
+    color: #eee;
+    font-weight: 500;
+}
+
+/* Category Selection */
+.sch-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.sch-cat-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.sch-cat-card.active {
+    background: rgba(34,197,94,0.1);
+    border-color: #22C55E;
+}
+
+@media (max-width: 1100px) {
+    .sch-container {
+        grid-template-columns: 1fr;
+    }
+    .sch-right-panel {
+        position: static;
+        height: auto;
+    }
+}

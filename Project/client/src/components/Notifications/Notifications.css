@@ -1,0 +1,257 @@
+.notification-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.notification-drawer {
+    width: 400px;
+    max-width: 100vw;
+    height: 100%;
+    background: rgba(17, 25, 40, 0.95);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-left: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.notification-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-header h2 {
+    margin: 0;
+    color: #e5b05c;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.close-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #e5b05c;
+}
+
+.notification-actions {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-btn:hover {
+    color: #e5b05c;
+}
+
+.notification-filters {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 20px;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.notification-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-chip {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    font-size: 0.8rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+}
+
+.filter-chip.active {
+    background: rgba(229, 176, 92, 0.1);
+    border-color: #e5b05c;
+    color: #e5b05c;
+}
+
+.notification-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notification-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    position: relative;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.notification-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.notification-card.unread {
+    background: rgba(229, 176, 92, 0.05);
+    border-color: rgba(229, 176, 92, 0.3);
+}
+
+.notification-card.unread::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    background: #e5b05c;
+    border-radius: 50%;
+}
+
+.notification-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.notification-card.unread .notification-icon {
+    background: rgba(229, 176, 92, 0.2);
+    color: #e5b05c;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-title {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.notification-desc {
+    margin: 0 0 10px 0;
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+.notification-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #777;
+}
+
+.notification-card-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.notification-card-actions button {
+    background: transparent;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.notification-card-actions button:hover {
+    color: #fff;
+}
+
+.notification-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+}
+
+.notification-empty i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.5;
+}
+
+/* Skeleton Loading */
+.skeleton-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.skeleton-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    animation: pulse 1.5s infinite;
+}
+
+.skeleton-line {
+    height: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+.skeleton-line.short {
+    width: 60%;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}

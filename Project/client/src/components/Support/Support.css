@@ -1,0 +1,300 @@
+.support-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #fff;
+    min-height: calc(100vh - 80px); /* Account for navbar */
+}
+
+.support-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.support-header h1 {
+    font-size: 2rem;
+    color: #e5b05c;
+    margin: 0;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 900px) {
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.glass-panel {
+    background: rgba(17, 25, 40, 0.75);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-size: 1.25rem;
+    color: #e5b05c;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+}
+
+.faq-search {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 1.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.faq-search:focus {
+    border-color: #e5b05c;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.faq-question:hover, .faq-item.open .faq-question {
+    color: #e5b05c;
+}
+
+.faq-answer {
+    color: #888;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.ticket-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.ticket-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.ticket-id {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+.ticket-status {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.status-Open { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.status-InProgress { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+.status-Resolved { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+.status-Closed { background: rgba(107, 114, 128, 0.2); color: #9ca3af; }
+
+.ticket-subject {
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.ticket-date {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.btn-primary {
+    background: #e5b05c;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background: #c99846;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: rgba(17, 25, 40, 0.95);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-control:focus {
+    border-color: #e5b05c;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.ticket-details-thread {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message-bubble {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    border-left: 3px solid #555;
+}
+
+.message-bubble.support-agent {
+    background: rgba(229, 176, 92, 0.05);
+    border-left-color: #e5b05c;
+    margin-left: 2rem;
+}
+
+.message-bubble.user {
+    margin-right: 2rem;
+    border-left-color: #4ade80;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.message-sender {
+    font-weight: bold;
+    color: #ccc;
+}
+
+.message-body {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+}
+
+.reply-box {
+    margin-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1rem;
+}
+
+.contact-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-card i {
+    font-size: 1.5rem;
+    color: #e5b05c;
+}
+
+.contact-card h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-card p {
+    margin: 0;
+    color: #888;
+    font-size: 0.85rem;
+}

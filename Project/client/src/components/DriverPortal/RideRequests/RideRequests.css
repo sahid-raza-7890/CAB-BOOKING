@@ -1,0 +1,152 @@
+.ride-requests-container {
+    padding: 24px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.incoming-ride-card {
+    background: rgba(17, 17, 17, 0.8);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.incoming-ride-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(251, 191, 36, 0.15);
+}
+
+.ride-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 12px;
+}
+
+.ride-earnings {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fbbf24;
+}
+
+.ride-eta {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.ride-locations {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.location-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.location-icon {
+    margin-top: 4px;
+}
+
+.location-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.location-label {
+    font-size: 12px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.location-address {
+    font-size: 16px;
+    color: #f8fafc;
+    font-weight: 500;
+}
+
+.ride-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.btn-accept {
+    flex: 1;
+    background: #fbbf24;
+    color: #000;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-accept:hover {
+    background: #f59e0b;
+}
+
+.btn-reject {
+    flex: 1;
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-reject:hover {
+    background: rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.countdown-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: #fbbf24;
+    transition: width 1s linear;
+}
+
+.ride-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+}
+
+.ride-modal-content {
+    width: 90%;
+    max-width: 500px;
+}

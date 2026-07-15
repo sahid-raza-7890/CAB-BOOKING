@@ -1,0 +1,352 @@
+.pp-container {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 210, 31, 0.2);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  color: #fff;
+  font-family: sans-serif;
+  overflow-x: auto;
+}
+
+.pp-title {
+  color: #FFD21F;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.pp-error {
+  color: #EF4444;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pp-balance-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.pp-balance-label {
+  color: #94A3B8;
+  font-size: 1rem;
+  margin: 0 0 8px 0;
+}
+
+.pp-balance-amount {
+  color: #10B981;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pp-add-funds-box {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.pp-input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.pp-input {
+  flex: 1;
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 210, 31, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+}
+
+.pp-btn {
+  background: #FFD21F;
+  color: #0F172A;
+  padding: 0 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pp-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.pp-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  min-width: 500px;
+}
+
+.pp-th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid rgba(255, 210, 31, 0.5);
+  color: #FFD21F;
+}
+
+.pp-td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+}
+
+.pp-td-bright {
+  color: #fff;
+}
+
+.pp-badge {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10B981;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.pp-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.pp-pagination-btn {
+  background: rgba(255, 210, 31, 0.2);
+  color: #FFD21F;
+  border: 1px solid #FFD21F;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.pp-pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Help Center Redesign */
+.hc-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.hc-back-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94A3B8;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hc-back-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.hc-category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.hc-category-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 210, 31, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.hc-category-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 210, 31, 0.4);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 210, 31, 0.15);
+}
+
+.hc-category-icon {
+  background: rgba(255, 210, 31, 0.15);
+  color: #FFD21F;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hc-category-content {
+  flex: 1;
+}
+
+.hc-category-content h4 {
+  margin: 0 0 4px 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.hc-category-content p {
+  margin: 0;
+  color: #94A3B8;
+  font-size: 0.9rem;
+}
+
+.hc-category-chevron {
+  color: #64748B;
+  transition: color 0.2s ease;
+}
+
+.hc-category-card:hover .hc-category-chevron {
+  color: #FFD21F;
+}
+
+.hc-topic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+}
+
+.hc-topic-btn {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hc-topic-btn:hover {
+  background: rgba(255, 210, 31, 0.1);
+  border-color: rgba(255, 210, 31, 0.3);
+  padding-left: 2rem;
+}
+
+.hc-creation-form {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hc-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.hc-form-group label {
+  display: block;
+  color: #94A3B8;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.hc-submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+.hc-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: rgba(15, 23, 42, 0.4);
+  border-radius: 16px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.hc-empty-state p {
+  color: #94A3B8;
+  margin: 1rem 0 1.5rem;
+}
+
+.hc-ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hc-ticket-card {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.hc-ticket-card:hover {
+  background: rgba(30, 41, 59, 0.8);
+}
+
+.hc-ticket-card h4 {
+  margin: 0 0 8px 0;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.hc-status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hc-status-open {
+  background: rgba(255, 210, 31, 0.15);
+  color: #FFD21F;
+}
+
+.hc-status-resolved {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10B981;
+}
+
+.hc-status-closed {
+  background: rgba(100, 116, 139, 0.15);
+  color: #94A3B8;
+}
+
+.pp-btn-outline {
+  background: transparent;
+  color: #FFD21F;
+  border: 1px solid #FFD21F;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pp-btn-outline:hover {
+  background: rgba(255, 210, 31, 0.1);
+}

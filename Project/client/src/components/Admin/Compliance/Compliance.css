@@ -1,0 +1,242 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Compliance.css — UCAB Premium Admin Theme
+   Matches existing dark-mode glassmorphism design system
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.comp-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+.comp-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.comp-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  flex: 1;
+}
+
+.comp-meta {
+  font-size: 11px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Stats Cards */
+.comp-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.comp-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comp-stat-val {
+  font-size: 22px;
+  font-weight: 900;
+  color: #FFD21F;
+  margin-top: 4px;
+}
+
+.comp-stat-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.comp-stat-icon {
+  font-size: 20px;
+  opacity: 0.6;
+}
+
+/* Tabs */
+.comp-tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding-bottom: 2px;
+}
+
+.comp-tab {
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.15s;
+}
+.comp-tab:hover { color: #aaa; }
+.comp-tab.active { color: #FFD21F; }
+.comp-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 2px; background: #FFD21F;
+  border-radius: 2px;
+}
+
+/* Table Card Layout */
+.comp-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.comp-table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.comp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.comp-table th {
+  padding: 10px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  white-space: nowrap;
+}
+.comp-table td {
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #ccc;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  white-space: nowrap;
+}
+.comp-table tr { cursor: pointer; transition: background 0.12s; }
+.comp-table tr:hover td { background: rgba(255,255,255,0.025); }
+
+/* Document View / Details Modal & Drawers */
+.comp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  padding: 20px;
+}
+
+.comp-modal {
+  background: #0f0f1a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  width: 600px;
+  max-width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.8);
+}
+
+.comp-modal-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.comp-modal-title { font-size: 14px; font-weight: 800; color: #fff; }
+.comp-modal-body {
+  padding: 16px 18px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comp-doc-preview-wrap {
+  width: 100%;
+  height: 240px;
+  background: #070707;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.comp-doc-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.comp-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+}
+.comp-input:focus { border-color: rgba(255,210,31,0.4); }
+
+.comp-btn-row {
+  display: flex;
+  gap: 8px;
+  padding: 14px 18px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.comp-action-btn {
+  flex: 1;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid transparent;
+  font-family: 'Inter', sans-serif;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+}
+.comp-action-btn.approve { background: rgba(0,210,106,0.12); border-color: rgba(0,210,106,0.25); color: #00D26A; }
+.comp-action-btn.approve:hover { background: rgba(0,210,106,0.2); }
+.comp-action-btn.reject { background: rgba(255,75,75,0.12); border-color: rgba(255,75,75,0.25); color: #FF4B4B; }
+.comp-action-btn.reject:hover { background: rgba(255,75,75,0.2); }
+.comp-action-btn.cancel { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.08); color: #aaa; }
+.comp-action-btn.cancel:hover { background: rgba(255,255,255,0.08); }
+.comp-action-btn:disabled { opacity: 0.35; cursor: not-allowed; }

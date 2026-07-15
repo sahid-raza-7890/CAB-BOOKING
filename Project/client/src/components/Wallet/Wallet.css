@@ -1,0 +1,184 @@
+.wal-container {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 32px;
+    max-width: 1400px;
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.wal-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.wal-main-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.wal-card {
+    background: rgba(20, 20, 20, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.wal-card-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    color: #fff;
+}
+
+.wal-balance-box {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.wal-balance-label {
+    font-size: 14px;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.wal-balance-amount {
+    font-size: 48px;
+    font-weight: 900;
+    color: #D4AF37;
+    margin: 0;
+}
+
+.wal-locked-balance {
+    font-size: 13px;
+    color: #EF4444;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.wal-btn-gold {
+    background: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 24px;
+}
+
+.wal-btn-gold:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+}
+
+.wal-btn-dark {
+    background: rgba(255,255,255,0.05);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.2s;
+    margin-top: 12px;
+}
+
+.wal-btn-dark:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Ledger List */
+.wal-ledger {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.wal-txn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.wal-txn-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.wal-txn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.wal-txn-icon.Credit {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22C55E;
+}
+
+.wal-txn-icon.Debit {
+    background: rgba(239, 68, 68, 0.1);
+    color: #EF4444;
+}
+
+.wal-txn-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.wal-txn-date {
+    font-size: 12px;
+    color: #888;
+}
+
+.wal-txn-amount {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.wal-txn-amount.Credit {
+    color: #22C55E;
+}
+
+.wal-txn-amount.Debit {
+    color: #EF4444;
+}
+
+@media (max-width: 900px) {
+    .wal-container {
+        grid-template-columns: 1fr;
+    }
+}

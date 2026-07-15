@@ -1,0 +1,341 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   DriverManagement.css — UCAB Premium Admin Theme
+   Matches existing dark-mode glassmorphism design system
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.dm-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
+.dm-topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dm-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  flex: 1;
+}
+
+.dm-meta {
+  font-size: 11px;
+  color: #555;
+  font-weight: 600;
+}
+
+/* Filters */
+.dm-filters {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.dm-search {
+  flex: 1;
+  min-width: 180px;
+  max-width: 280px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 12px;
+  outline: none;
+}
+.dm-search::placeholder { color: #555; }
+.dm-search:focus { border-color: rgba(255, 210, 31, 0.4); }
+
+.dm-select {
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  color: #ccc;
+  font-size: 11px;
+  cursor: pointer;
+  outline: none;
+}
+.dm-select:focus { border-color: rgba(255, 210, 31, 0.4); }
+.dm-select option { background: #1a1a2e; }
+
+.dm-refresh-btn {
+  padding: 8px 14px;
+  background: rgba(255, 210, 31, 0.12);
+  border: 1px solid rgba(255, 210, 31, 0.25);
+  border-radius: 8px;
+  color: #FFD21F;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.dm-refresh-btn:hover { background: rgba(255, 210, 31, 0.2); }
+
+.dm-clear-btn {
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 8px;
+  color: #666;
+  font-size: 11px;
+  cursor: pointer;
+}
+.dm-clear-btn:hover { color: #aaa; }
+
+/* Status Pills */
+.dm-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.dm-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: #666;
+  transition: all 0.18s;
+}
+.dm-pill:hover { color: #ccc; }
+.dm-pill.active { background: rgba(255,210,31,0.15); border-color: rgba(255,210,31,0.35); color: #FFD21F; }
+.dm-pill[data-status='Active'].active    { background: rgba(0,210,106,0.15); border-color: rgba(0,210,106,0.35); color: #00D26A; }
+.dm-pill[data-status='Suspended'].active { background: rgba(255,75,75,0.15); border-color: rgba(255,75,75,0.35);  color: #FF4B4B; }
+.dm-pill[data-status='Pending'].active   { background: rgba(168,85,247,0.15); border-color: rgba(168,85,247,0.35); color: #C084FC; }
+
+/* Table */
+.dm-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.dm-table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.dm-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+.dm-table th {
+  padding: 10px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  white-space: nowrap;
+  background: rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+}
+.dm-table td {
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #ccc;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  white-space: nowrap;
+}
+.dm-table tr { cursor: pointer; transition: background 0.12s; }
+.dm-table tr:hover td { background: rgba(255,255,255,0.025); }
+
+/* Badges & Dots */
+.dm-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.dm-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Skeleton */
+.dm-skeleton-row td > .dm-skel {
+  height: 12px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+  background-size: 200% 100%;
+  animation: dm-shimmer 1.4s infinite;
+}
+@keyframes dm-shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* Drawer Elements */
+.dd-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.dd-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 520px;
+  max-width: 95vw;
+  background: #0f0f1a;
+  border-left: 1px solid rgba(255,255,255,0.08);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+.dd-drawer.open { transform: translateX(0); }
+
+.dd-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+}
+.dd-header-title { flex: 1; font-size: 14px; font-weight: 800; color: #fff; }
+.dd-close {
+  width: 30px; height: 30px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 7px;
+  color: #777;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.dd-close:hover { color: #fff; background: rgba(255,75,75,0.15); }
+
+.dd-tabs {
+  display: flex;
+  background: rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding: 0 10px;
+  flex-shrink: 0;
+}
+.dd-tab {
+  padding: 12px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.15s;
+}
+.dd-tab:hover { color: #aaa; }
+.dd-tab.active { color: #FFD21F; }
+.dd-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 10%; right: 10%;
+  height: 2px; background: #FFD21F;
+  border-radius: 2px;
+}
+
+.dd-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dd-section {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 14px;
+}
+.dd-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.dd-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  gap: 8px;
+}
+.dd-row:last-child { border-bottom: none; }
+.dd-label { font-size: 11px; color: #555; font-weight: 600; }
+.dd-value { font-size: 11px; color: #ccc; font-weight: 600; text-align: right; }
+.dd-value.gold { color: #FFD21F; }
+.dd-value.green { color: #00D26A; }
+.dd-value.red { color: #FF4B4B; }
+
+/* Sublist Items */
+.dd-doc-item, .dd-veh-item, .dd-earn-item, .dd-trip-item {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  padding: 10px 0;
+}
+.dd-doc-item:last-child, .dd-veh-item:last-child, .dd-earn-item:last-child, .dd-trip-item:last-child {
+  border-bottom: none;
+}
+
+.dd-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.dd-action-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid;
+  display: flex; align-items: center; justify-content: center;
+  gap: 5px;
+}
+.dd-action-btn.verify { background: rgba(0,210,106,0.1); border-color: rgba(0,210,106,0.25); color: #00D26A; }
+.dd-action-btn.verify:hover { background: rgba(0,210,106,0.2); }
+.dd-action-btn.suspend { background: rgba(255,75,75,0.1); border-color: rgba(255,75,75,0.25); color: #FF4B4B; }
+.dd-action-btn.suspend:hover { background: rgba(255,75,75,0.2); }
+.dd-action-btn.reactivate { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.25); color: #60A5FA; }
+.dd-action-btn.reactivate:hover { background: rgba(59,130,246,0.2); }
+.dd-action-btn:disabled { opacity: 0.35; cursor: not-allowed; }

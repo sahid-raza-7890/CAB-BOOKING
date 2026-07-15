@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Projects\\ucab\\server\\logs\\.5dcf7e86a4842a166845cfdbe83e2afb930d0d27-audit.json",
+    "files": [
+        {
+            "date": 1783757067434,
+            "name": "C:\\Projects\\ucab\\server\\logs\\rejections-2026-07-11.log",
+            "hash": "a2cbfeeccfe72b5918b41a0c56735c25b59e0ff68cc222318ea44c21d7157333"
+        },
+        {
+            "date": 1783794624687,
+            "name": "C:\\Projects\\ucab\\server\\logs\\rejections-2026-07-12.log",
+            "hash": "f47331fdb86f76847b21fce4262839a65bf3e1256f86301ecf3fffa37436bea5"
+        },
+        {
+            "date": 1783957557512,
+            "name": "C:\\Projects\\ucab\\server\\logs\\rejections-2026-07-13.log",
+            "hash": "207497ad087129935d305377461b4251e503933de1061e0848ee937e6b351788"
+        },
+        {
+            "date": 1784041573507,
+            "name": "C:\\Projects\\ucab\\server\\logs\\rejections-2026-07-14.log",
+            "hash": "39947f98c2c25f068371ec19976c7a93f0a8c44afd82f23f2d66f06776ddb8f1"
+        },
+        {
+            "date": 1784091544465,
+            "name": "C:\\Projects\\ucab\\server\\logs\\rejections-2026-07-15.log",
+            "hash": "b681824429c9d7dc6c90e782d732d61734c8ec63cb42573acb3de4c749cd11f0"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,113 @@
+.emergency-dashboard {
+    padding: 24px;
+    color: #f8fafc;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.emergency-header {
+    margin-bottom: 24px;
+}
+
+.emergency-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ef4444; /* Red for emergency */
+    margin: 0;
+}
+
+.emergency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.emergency-panel {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    text-align: center;
+}
+
+.sos-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border: 8px solid rgba(239, 68, 68, 0.2);
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 32px rgba(239, 68, 68, 0.5);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulseRed 2s infinite;
+}
+
+.sos-button:hover {
+    transform: scale(1.05);
+}
+
+.sos-button:active {
+    transform: scale(0.95);
+}
+
+.sos-button.active {
+    background: #0f172a;
+    border-color: #ef4444;
+    color: #ef4444;
+    animation: none;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.8);
+}
+
+.emergency-status-banner {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emergency-status-banner h3 {
+    color: #ef4444;
+    margin: 0 0 4px 0;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+@keyframes pulseRed {
+    0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+@media (max-width: 768px) {
+    .emergency-grid {
+        grid-template-columns: 1fr;
+    }
+}

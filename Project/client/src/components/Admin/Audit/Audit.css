@@ -1,0 +1,344 @@
+.ucab-audit-container {
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+  padding: 32px;
+  background: rgba(10, 10, 12, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.ucab-glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.ucab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.ucab-header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.ucab-accent-text {
+  color: #FFD21F;
+}
+
+.ucab-btn-primary {
+  background: #FFD21F;
+  color: #121212;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ucab-btn-primary:hover {
+  background: #e6bd1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 210, 31, 0.3);
+}
+
+.ucab-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ucab-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Table Styles */
+.ucab-table-wrapper {
+  overflow-x: auto;
+}
+
+.ucab-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.ucab-table th {
+  padding: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ucab-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ucab-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.ucab-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+}
+
+.ucab-status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ucab-status-success {
+  background: rgba(46, 213, 115, 0.15);
+  color: #2ed573;
+}
+
+.ucab-status-warning {
+  background: rgba(255, 165, 2, 0.15);
+  color: #ffa502;
+}
+
+.ucab-status-danger {
+  background: rgba(255, 71, 87, 0.15);
+  color: #ff4757;
+}
+
+/* Timeline Styles */
+.ucab-timeline {
+  position: relative;
+  padding-left: 24px;
+}
+
+.ucab-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.ucab-timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.ucab-timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -29px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFD21F;
+  border: 3px solid rgba(18, 18, 18, 0.8);
+  box-shadow: 0 0 0 2px rgba(255, 210, 31, 0.3);
+}
+
+.ucab-timeline-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.ucab-timeline-time {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+}
+
+/* Filters */
+.ucab-filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ucab-input, .ucab-select {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.ucab-input:focus, .ucab-select:focus {
+  border-color: #FFD21F;
+}
+
+/* Analytics */
+.ucab-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.ucab-kpi-card {
+  text-align: center;
+}
+
+.ucab-kpi-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #FFD21F;
+  margin-bottom: 8px;
+}
+
+.ucab-kpi-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Drawer */
+.ucab-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.ucab-drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ucab-drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 400px;
+  height: 100vh;
+  background: rgba(18, 18, 20, 0.95);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  z-index: 1001;
+  transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.ucab-drawer.open {
+  right: 0;
+}
+
+.ucab-drawer-header {
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ucab-drawer-content {
+  padding: 24px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Modal */
+.ucab-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ucab-modal {
+  background: rgba(22, 22, 24, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.ucab-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* Skeleton & Empty */
+.ucab-skeleton-row {
+  height: 48px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 75%);
+  background-size: 200% 100%;
+  animation: ucab-shimmer 1.5s infinite;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+@keyframes ucab-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.ucab-empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.ucab-empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}

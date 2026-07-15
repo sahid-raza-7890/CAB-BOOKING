@@ -1,0 +1,28 @@
+[
+  {
+    "id": "nellore_airport_main_gate",
+    "name": "Airport Main Entrance (Restricted)",
+    "restrictedCenter": { "lat": 14.4426, "lng": 79.9865 },
+    "radiusMeters": 300,
+    "legalSnaps": [
+      {
+        "name": "Designated Rideshare Pickup Zone",
+        "lat": 14.4400,
+        "lng": 79.9890
+      }
+    ]
+  },
+  {
+    "id": "downtown_mall_pedestrian",
+    "name": "Downtown Pedestrian Only Zone",
+    "restrictedCenter": { "lat": 14.4500, "lng": 79.9900 },
+    "radiusMeters": 150,
+    "legalSnaps": [
+      {
+        "name": "Mall West Gate Loading",
+        "lat": 14.4515,
+        "lng": 79.9885
+      }
+    ]
+  }
+]

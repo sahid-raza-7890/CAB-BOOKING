@@ -1,0 +1,22 @@
+{
+  "home": "Home",
+  "my_rides": "My Rides",
+  "services": "Services",
+  "support": "Support",
+  "contact": "Contact Us",
+  "book": "Book a Ride",
+  "login": "Login",
+  "logout": "🚪 Logout",
+  "profile": "👤 My Profile",
+  "wallet": "💳 Wallet & Payments",
+  "settings": "⚙️ Settings",
+  
+  "hero_title": "Your Journey, Simplified.",
+  "pickup_location": "Pickup Location",
+  "dropoff_location": "Drop-off Location",
+  "estimate_book": "Estimate Fare & Book",
+  "quick_rebook": "Quick Rebook:",
+  "loc_home": "Home",
+  "loc_office": "Office",
+  "loc_airport": "Airport"
+}

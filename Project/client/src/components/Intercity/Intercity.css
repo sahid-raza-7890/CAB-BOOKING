@@ -1,0 +1,240 @@
+.intercity-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  height: calc(100vh - 80px);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1100px) {
+  .intercity-container {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.ic-main-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.ic-main-column::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ic-main-column::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+.ic-right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.ic-card {
+  background: #141414;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.ic-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #fff;
+}
+
+/* Booking Form */
+.ic-form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+@media (max-width: 600px) {
+  .ic-form-row { flex-direction: column; gap: 16px; }
+}
+
+.ic-input-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ic-input-group label {
+  font-size: 13px;
+  color: #a0a0a0;
+  font-weight: 600;
+}
+
+.ic-input {
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s;
+}
+.ic-input:focus {
+  outline: none;
+  border-color: #FFD400;
+}
+
+/* Trip Type Selector */
+.ic-trip-types {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.ic-trip-chip {
+  flex: 1;
+  padding: 12px;
+  text-align: center;
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+  transition: all 0.2s;
+}
+.ic-trip-chip.active {
+  background: rgba(255, 212, 0, 0.1);
+  border-color: #FFD400;
+  color: #FFD400;
+}
+
+/* Vehicle Selector */
+.ic-vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.ic-vehicle-card {
+  background: #0b0b0b;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ic-vehicle-card.active {
+  border-color: #FFD400;
+  box-shadow: 0 0 0 1px #FFD400;
+}
+.ic-vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ic-vehicle-emoji {
+  font-size: 28px;
+}
+.ic-vehicle-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+}
+.ic-vehicle-fare {
+  font-weight: 800;
+  font-size: 18px;
+  color: #22c55e;
+}
+.ic-vehicle-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: #888;
+}
+
+/* Popular Destinations */
+.ic-dest-scroll {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.ic-dest-scroll::-webkit-scrollbar { height: 0px; }
+.ic-dest-chip {
+  background: rgba(255, 212, 0, 0.1);
+  color: #FFD400;
+  border: 1px solid rgba(255, 212, 0, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.ic-dest-chip:hover {
+  background: rgba(255, 212, 0, 0.2);
+}
+
+/* Map Container */
+.ic-map-container {
+  flex: 1;
+  min-height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Fare Breakdwon */
+.ic-fare-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+.ic-fare-row.total {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  border-top: 1px dashed rgba(255,255,255,0.2);
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.ic-btn-primary {
+  width: 100%;
+  padding: 16px;
+  background: #FFD400;
+  color: #000;
+  font-weight: 800;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 24px;
+}
+.ic-btn-primary:hover {
+  background: #e6c200;
+}
+.ic-btn-primary:disabled {
+  background: #555;
+  color: #888;
+  cursor: not-allowed;
+}

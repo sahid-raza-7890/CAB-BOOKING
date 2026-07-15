@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Projects\\ucab\\server\\logs\\.c0e70508395b9ea1233474c21deb291d1e1a70e3-audit.json",
+    "files": [
+        {
+            "date": 1783757067426,
+            "name": "C:\\Projects\\ucab\\server\\logs\\access-2026-07-11.log",
+            "hash": "0b7ed1314687630ac0adb941df2665a1cd558c9c5cb43e723e154cc188ea7496"
+        },
+        {
+            "date": 1783794624642,
+            "name": "C:\\Projects\\ucab\\server\\logs\\access-2026-07-12.log",
+            "hash": "73065d6b12b8e1abbff75df95847fab6d44bcb9a2962289e7e2541e552b498f2"
+        },
+        {
+            "date": 1783957557501,
+            "name": "C:\\Projects\\ucab\\server\\logs\\access-2026-07-13.log",
+            "hash": "bf2ca91ae2bfb54290683c66d14e1c2124f066d134a92c7f9d2e47239ee8fa3a"
+        },
+        {
+            "date": 1784041573498,
+            "name": "C:\\Projects\\ucab\\server\\logs\\access-2026-07-14.log",
+            "hash": "f9405b2e42050b1183c3b5603da3cf11bb9ae735b215699662efeb71b5bdc5f9"
+        },
+        {
+            "date": 1784091544458,
+            "name": "C:\\Projects\\ucab\\server\\logs\\access-2026-07-15.log",
+            "hash": "7d42083be9db5fda686f66b30da323548a7e74170a9c2aeb85019b3d09ddec1c"
+        },
+        {
+            "date": 1784140201073,
+            "name": "C:\\Projects\\ucab\\server\\logs\\access-2026-07-16.log",
+            "hash": "620051c7b93c4b38ac43047bca03cc0a4e24e612460971dfa03e2ed183b177b3"
+        }
+    ],
+    "hashType": "sha256"
+}

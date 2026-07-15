@@ -1,0 +1,22 @@
+{
+  "home": "होम",
+  "my_rides": "मेरी सवारी",
+  "services": "सेवाएं",
+  "support": "समर्थन",
+  "contact": "संपर्क करें",
+  "book": "राइड बुक करें",
+  "login": "लॉग इन",
+  "logout": "🚪 लॉग आउट",
+  "profile": "👤 मेरी प्रोफ़ाइल",
+  "wallet": "💳 वॉलेट और भुगतान",
+  "settings": "⚙️ सेटिंग्स",
+
+  "hero_title": "आपकी यात्रा, सरल।",
+  "pickup_location": "पिकअप स्थान",
+  "dropoff_location": "ड्रॉप-ऑफ स्थान",
+  "estimate_book": "किराया अनुमान और बुक करें",
+  "quick_rebook": "त्वरित रीबुक:",
+  "loc_home": "घर",
+  "loc_office": "कार्यालय",
+  "loc_airport": "हवाई अड्डा"
+}

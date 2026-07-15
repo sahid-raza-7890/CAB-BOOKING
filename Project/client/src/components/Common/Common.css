@@ -1,0 +1,63 @@
+/* Dark Glassmorphism Skeleton */
+.skeleton-loader {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.05) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: rgba(25, 25, 35, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.empty-title {
+  color: var(--text-main, #ffffff);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.empty-message {
+  color: var(--text-muted, #aaaaaa);
+  margin-bottom: 20px;
+}
+
+.empty-retry-btn {
+  background: var(--primary-color, #ffaa00);
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.empty-retry-btn:hover {
+  background: var(--primary-hover, #ff8800);
+  transform: scale(1.05);
+}
+
+.empty-retry-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
